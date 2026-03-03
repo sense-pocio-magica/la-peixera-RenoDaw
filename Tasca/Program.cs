@@ -4,6 +4,6 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Salida Console3");
+        Console.WriteLine("Salida Console4");
     }
 }
