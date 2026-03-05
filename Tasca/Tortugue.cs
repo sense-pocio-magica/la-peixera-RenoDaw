@@ -1,6 +1,6 @@
 namespace Tasca;
 
-public class Tortugue
+public class Tortugue : Fauna
 {
     
 }

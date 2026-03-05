@@ -1,6 +1,6 @@
 namespace Tasca;
 
-public class Pop
+public class Pop : Fauna
 {
     
 }

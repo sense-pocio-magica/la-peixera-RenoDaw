@@ -1,6 +1,6 @@
 namespace Tasca;
 
-public class Peix : Fauna
+public class Fauna
 {
     
 }

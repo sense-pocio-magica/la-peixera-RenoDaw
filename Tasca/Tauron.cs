@@ -1,6 +1,6 @@
 namespace Tasca;
 
-public class Tauron : Animal
+public class Tauron : Fauna
 
 {
     
