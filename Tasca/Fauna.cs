@@ -8,8 +8,7 @@ public class Fauna
     public int X { get; set; }
     public int Y { get; set; }
     
-    public int DirX { get; set; }
-    public int DirY { get; set; }
+    public (int X, int Y) Sentit { get; set; }
 
     public Fauna()
     {
@@ -18,19 +17,19 @@ public class Fauna
 
         if (direccio == 0) 
         { 
-            DirX = 0; DirY = -1; // Dalt
+            Sentit = (0, -1); // Dalt
         } 
-        else if (direccio == 1) 
-        { 
-            DirX = 0; DirY = 1;  // Baix
+        else if (direccio == 1)
+        {
+            Sentit = (0, 1); // Baix
         } 
         else if (direccio == 2) 
         { 
-            DirX = 1; DirY = 0;  // Dreta
+            Sentit = (1, 0); // Dreta
         } 
         else if (direccio == 3) 
         { 
-            DirX = -1; DirY = 0; // Esquerra
+            Sentit = (-1, 0); // Esquerra
         }
     }
 }

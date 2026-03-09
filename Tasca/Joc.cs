@@ -42,16 +42,48 @@ public class Joc
         foreach (Fauna animal in _peixera.Animals)
         {
             
-            // Com que tots són Fauna, tots tenen DirX i DirY.
-            // Els movem a tots directament!
-            animal.X += animal.DirX;
-            animal.Y += animal.DirY;
+            // --- MOVIMENT EIX X ---
+            if (animal.Sentit.X == 1)
+            {
+                animal.X += 1; // Mou a la dreta
+            }
+            else if (animal.Sentit.X == -1)
+            {
+                animal.X -= 1; // Mou a l'esquerra
+            }
 
-            // CONTROLS DE LÍMITS: Que no s'escapin de la peixera!
-            if (animal.X < 0) animal.X = 0; 
-            if (animal.X >= _peixera.Amplada) animal.X = _peixera.Amplada - 1;
-            if (animal.Y < 0) animal.Y = 0;
-            if (animal.Y >= _peixera.Alcada) animal.Y = _peixera.Alcada - 1;
+            // --- MOVIMENT EIX Y ---
+            if (animal.Sentit.Y == 1)
+            {
+                animal.Y += 1; // Mou cap a baix
+            }
+            else if (animal.Sentit.Y == -1)
+            {
+                animal.Y -= 1; // Mou cap a dalt
+            }            
+
+            
+            // Si marxa per l'esquerra (es fa negatiu), apareix per la dreta
+            if (animal.X < 0) 
+            {
+                animal.X = _peixera.Amplada - 1; 
+            }
+            // Si marxa per la dreta (arriba a l'amplada màxima), apareix per l'esquerra (0)
+            else if (animal.X >= _peixera.Amplada) 
+            {
+                animal.X = 0;
+            }
+
+            // Si marxa per dalt (es fa negatiu), apareix per baix
+            if (animal.Y < 0) 
+            {
+                animal.Y = _peixera.Alcada - 1;
+            }
+            // Si marxa per baix (arriba a l'alçada màxima), apareix per dalt (0)
+            else if (animal.Y >= _peixera.Alcada) 
+            {
+                animal.Y = 0;
+            }
           
         }
             
