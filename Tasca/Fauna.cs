@@ -1,5 +1,7 @@
 namespace Tasca;
 
+public enum Sexe { Mascle, Femella } // Definim les dues opcions
+
 public class Fauna
 {
     // Creem un Random compartit per a tots els peixos
@@ -9,9 +11,12 @@ public class Fauna
     public int Y { get; set; }
     
     public (int X, int Y) Sentit { get; set; }
+    
+    public Sexe Genere { get; set; }
 
-    public Fauna()
+    public Fauna(Sexe sexe)
     {
+        Genere = sexe;
         // Generem un número del 0 al 3 per triar una de les 4 direccions
         int direccio = _rnd.Next(0, 4); 
 

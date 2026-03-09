@@ -19,12 +19,14 @@ internal class Program
 
         for (int i = 0; i < NumPeix; i++)
         {
-            llistajoc.Add(new Peix());
+            Sexe sexeAssignat = (i < NumPeix / 2) ? Sexe.Mascle : Sexe.Femella;
+            llistajoc.Add(new Peix(sexeAssignat));
         }
 
         for (int i = 0; i < NumTauron; i++)
         {
-            llistajoc.Add(new Tauron());
+            Sexe sexeAssignat = (i < NumTauron / 2) ? Sexe.Mascle : Sexe.Femella;
+            llistajoc.Add(new Tauron(sexeAssignat));
         }
 
         for (int i = 0; i < NumPop; i++)
@@ -34,7 +36,8 @@ internal class Program
 
         for (int i = 0; i < NumTortugue; i++)
         {
-            llistajoc.Add(new Tortugue());
+            Sexe sexeAssignat = (i < NumTortugue / 2) ? Sexe.Mascle : Sexe.Femella;
+            llistajoc.Add(new Tortugue(sexeAssignat));
         }
         
         
