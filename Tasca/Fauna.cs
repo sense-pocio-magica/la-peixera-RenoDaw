@@ -1,3 +1,5 @@
+//a
+
 namespace Tasca;
 
 public enum Sexe { Mascle, Femella, Neutre } // Definim les dues opcions

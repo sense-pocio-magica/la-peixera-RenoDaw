@@ -1,4 +1,5 @@
-﻿namespace Tasca;
+﻿//a
+namespace Tasca;
 
 internal class Program
 {
