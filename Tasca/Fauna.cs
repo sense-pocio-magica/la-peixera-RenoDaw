@@ -1,6 +1,6 @@
 namespace Tasca;
 
-public enum Sexe { Mascle, Femella } // Definim les dues opcions
+public enum Sexe { Mascle, Femella, Neutre } // Definim les dues opcions
 
 public class Fauna
 {
@@ -13,6 +13,8 @@ public class Fauna
     public (int X, int Y) Sentit { get; set; }
     
     public Sexe Genere { get; set; }
+    
+    public int Edat { get; set; } = 0;
 
     public Fauna(Sexe sexe)
     {

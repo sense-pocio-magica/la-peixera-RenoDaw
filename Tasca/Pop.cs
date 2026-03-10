@@ -4,7 +4,7 @@ public class Pop : Fauna
 {
     private static Random _rnd = new Random();
     
-    public Pop()
+    public Pop() : base(Sexe.Neutre)
     {
         // Forcem que el Pop NOMÉS tingui 4 opcions (sempre hi ha un 0)
         int direccio = _rnd.Next(0, 4); 

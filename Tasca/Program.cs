@@ -47,11 +47,18 @@ internal class Program
 
         
         // cremem el joc 
-        Joc joc = new Joc(
-            //que te Joc
-            _peixera
-            );
-        // ejecutem el metode jugar per iniciar el joc
+        Joc joc = new Joc(_peixera);
+        
+       
         joc.Jugar(_peixera);
+        
+        var resultats = joc.ObtenirResultats();
+         
+        Console.WriteLine("\n--- RESULTATS DESPRÉS DE 100 RONDES ---");
+        Console.WriteLine($"Peixos restants: {resultats.Peixos}");
+        Console.WriteLine($"Taurons restants: {resultats.Taurons}");
+        Console.WriteLine($"Pops restants: {resultats.Pops}");
+        Console.WriteLine($"Tortugues restants: {resultats.Tortugues}");
+        Console.WriteLine("---------------------------------------");
     }
 }
